@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joulebug: Comunidad verde y conectada</title>
+<style>
+  body {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #e6f4ea 0%, #c6f0c9 100%);
+    color: #2e7d32;
+  }
+  header {
+    background: linear-gradient(90deg,#66bb6a,#43a047);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  h2 {
+    color: #1b5e20;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .buttons img {
+    width: 120px;
+    height: 120px;
+    margin: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border: 3px solid #4caf50;
+  }
+  .buttons img:hover {
+    transform: scale(1.1);
+  }
+  .info-box {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #c8e6c9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: left;
+  }
+  .gallery-buttons button {
+    background: #81c784;
+    border: none;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .gallery-buttons button:hover {
+    background: #4caf50;
+    color: white;
+  }
+  .gallery-images {
+    display: none;
+    margin-top: 1rem;
+  }
+  .gallery-images img {
+    width: 180px;
+    height: 120px;
+    margin: 0.5rem;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .reutilizado {
+    background: #a5d6a7;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+  }
+  .reutilizado img {
+    max-width: 250px;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 768px) {
+    .buttons img {
+      width: 90px;
+      height: 90px;
+    }
+    .gallery-images img {
+      width: 140px;
+      height: 100px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  Joulebug: Comunidad verde y conectada
+</header>
+
+<section id="inicio">
+  <h2>Guía amplia sobre cómo cuidar el medio ambiente</h2>
+  <p>Desde el colegio, la familia y la comunidad podemos transformar nuestros hábitos y proteger la naturaleza.</p>
+</section>
+
+<section id="guia">
+  <h2>Guía</h2>
+  <div class="buttons">
+    <img src="imagenes/logo de imagenes.jpg"onclick="mostrarInfo('colegio')">
+    <img src="imagenes/familia.jpg" alt="Familia" onclick="mostrarInfo('familia')">
+    <img src="imagenes/familia2.jpg" alt="Comunidad" onclick="mostrarInfo('comunidad')">
+    <img src="imagenes/reciclado.jpg" alt="Reutilizado" onclick="mostrarInfo('reutilizado')">
+  </div>
+  <div id="colegio" class="info-box">
+    <h3>Hábitos en el colegio 🌿</h3>
+    <ul>
+      <li>Separar la basura y reciclar materiales.</li>
+      <li>Ahorrar agua y energía en las aulas.</li>
+      <li>Cuidar áreas verdes y organizar campañas ambientales.</li>
+      <li>Usar botellas y loncheras reutilizables.</li>
+    </ul>
+  </div>
+  <div id="familia" class="info-box">
+    <h3>Hábitos en la familia 🏡</h3>
+    <ul>
+      <li>Separar residuos en casa y reducir el plástico.</li>
+      <li>Ahorrar energía y usar focos LED.</li>
+      <li>Plantar árboles o un huerto familiar.</li>
+      <li>Reutilizar envases y bolsas de tela.</li>
+    </ul>
+  </div>
+  <div id="comunidad" class="info-box">
+    <h3>Hábitos en la comunidad 🤝</h3>
+    <ul>
+      <li>Unirse a jornadas de limpieza y reciclaje comunitario.</li>
+      <li>Plantar árboles en parques y plazas.</li>
+      <li>Realizar talleres de educación ambiental.</li>
+      <li>Motivar con el ejemplo a vecinos y amigos.</li>
+    </ul>
+  </div>
+  <div id="reutilizado" class="info-box">
+    <h3>Reutilizado ♻️</h3>
+    <ul>
+      <li>Separar plásticos, vidrios, papel y metales.</li>
+      <li>Reducir el consumo de productos no reciclables.</li>
+      <li>Participar en programas de reciclaje local.</li>
+      <li>Educar sobre el reciclado desde casa y escuela.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Galería</h2>
+  <div class="gallery-buttons">
+    <button onclick="mostrarGaleria('arboles')">Árboles</button>
+    <button onclick="mostrarGaleria('recicladoGaleria')">Reciclado</button>
+    <button onclick="mostrarGaleria('reutilizadoGaleria')">Reutilizado</button>
+  </div>
+  <div id="arboles" class="gallery-images">
+    <img src="https://source.unsplash.com/300x200/?tree" alt="Árbol">
+    <img src="https://source.unsplash.com/301x200/?forest" alt="Bosque">
+    <img src="https://source.unsplash.com/302x200/?nature" alt="Naturaleza">
+  </div>
+  <div id="recicladoGaleria" class="gallery-images">
+    <img src="https://source.unsplash.com/303x200/?recycle" alt="Reciclaje">
+    <img src="https://source.unsplash.com/304x200/?plastic" alt="Plásticos">
+    <img src="https://source.unsplash.com/305x200/?trash" alt="Basura reciclada">
+  </div>
+  <div id="reutilizadoGaleria" class="gallery-images">
+    <img src="https://source.unsplash.com/306x200/?reuse" alt="Reutilizado">
+    <img src="https://source.unsplash.com/307x200/?craft" alt="Manualidades recicladas">
+    <img src="https://source.unsplash.com/308x200/?sustainable" alt="Sustentable">
+  </div>
+</section>
+
+<section class="reutilizado">
+  <h2>Reutilizado ♻️</h2>
+  <p>La reutilización es darle un nuevo uso a los materiales desechados o que ya no usamos:</p>
+  <ul>
+    <li>Usar frascos de vidrio como floreros o recipientes.</li>
+    <li>Convertir cajas de cartón en organizadores.</li>
+    <li>Crear manualidades con botellas plásticas.</li>
+    <li>Donar ropa u objetos en buen estado.</li>
+  </ul>
+  <img src="https://source.unsplash.com/400x300/?reuse" alt="Reutilización">
+</section>
+
+<footer>
+  🌱 Joulebug - Comunidad verde y conectada © 2025
+</footer>
+
+<script>
+  function mostrarInfo(id) {
+    document.querySelectorAll('.info-box').forEach(box => box.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+  function mostrarGaleria(id) {
+    document.querySelectorAll('.gallery-images').forEach(g => g.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+</body>
+</html>
